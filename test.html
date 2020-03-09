@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>My Test Code</title>
+    <style>
+        .classA {
+            border-radius: 20%; width: 200px; height: 20px;
+        }
+
+        .classB {
+            box-shadow: pink 5px 5px 8px; height: 200px; width: 50px;;
+        }
+    </style>
+</head>
+
+<body onload='getStarted()' onclick='addShadow()'>
+    <h1 id="first"></h1>
+</body>
+<script>
+    let h1 = document.getElementById('first');
+    h1.innerText = 'RAIN';
+    h1.style.backgroundColor = 'plum';
+    h1.style.color = 'whitesmoke';
+    h1.className = 'classA'
+    let body = document.body;
+    body.style.backgroundColor = 'powderblue'
+    function addShadow(){
+        h1.className += ' classB'
+    }
+</script>
+
+</html>

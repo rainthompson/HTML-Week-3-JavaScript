@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        tr:nth-child(even) {
+            background-color: salmon;
+        }
+
+        tr:nth-child(odd) {
+            background-color: pink;
+        }
+
+        .class2 {
+            background-color: deeppink;
+        }
+
+       
+        .topright {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        .table{
+            border: dashed 1px;
+          }
+          td,th{
+              border: dashed 1px;
+          }
+         
+    </style>
+</head>
+
+<body>
+    <h1 id="first"></h1>
+    <div class="topright">
+        <img src="images/CSS3_and_HTML5_logos_and.svg.png" height= 100px; width=200px; alt="" >
+      </div>
+      
+    <table class="table" cellspacing=0 cellpadding=5>
+
+        <caption style="font-size: large;">What can be learned at ETA</caption>
+        <tr>
+            <th class="class2">Course Id</th>
+            <th class="class2">Subject</th>
+            <th class="class2">Description</th>
+
+        </tr>
+        <tr>
+
+            <td>SD101</td>
+            <td>HTML</td>
+            <td>Fundamental of Web Design</td>
+
+        </tr>
+        <tr>
+
+            <td>SD102</td>
+            <td>SQL</td>
+            <td>Relational Database Design</td>
+
+        </tr>
+        <tr>
+
+            <td>SD103</td>
+            <td>Java</td>
+            <td>Java + Springboot</td>
+
+        </tr>
+        <tr>
+
+            <td>SD104</td>
+            <td>C#</td>
+            <td>C# using .NET Framework</td>
+
+        </tr>
+        <tr>
+
+            <td>SD105</td>
+            <td>JavaScript</td>
+            <td>Node.js using Express</td>
+
+        </tr>
+
+    </table>
+
+</body>
+<script>
+    let h1 = document.getElementById('first');
+    h1.innerText = 'Edge Tech Acadmey';
+    h1.style.color = 'pink';
+    let body = document.body;
+    body.style.backgroundColor = 'powderblue'
+</script>
+
+</html>
