@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APOD</title>
+</head>
+
+<body>
+    <center>
+        <h1>Astronomy Picture of the Day</h1>
+        <button type="button" onclick="loadAPOD()">Get Image</button>
+        <script>
+            function loadAPOD() {
+                fetch('https://api.nasa.gov/planetary/apod?api_key=ERwm45HayTSgOMi0VNBaa4rjrVa6LXoc29hOyZzT')
+                    .then(response => response.json())
+                    .then(apod => showData(apod));
+            }
+
+            function showData(apod) {
+                let title = document.getElementById("title");
+                title.innerText = apod.title;
+                let date = document.getElementById("date");
+                date.innerText = apod.date;
+                let explanation = document.getElementById("explanation");
+                explanation.innerText = apod.explanation;
+                let picture = document.getElementById("picture");
+                picture.src = apod.url;
+            }
+        </script>
+        <P>
+            <a href="https://apod.nasa.gov/apod/archivepix.html">Discover the cosmos!</a>
+            
+            Each day a different image or photograph of our fascinating universe is
+            featured, along with a brief explanation written by a professional astronomer.
+            
+        </P>
+        <div id="date"></div>
+        <img id="picture" src="">
+        <div id="title" style="font-weight:bold ;"></div>
+        <div id="explanation"></div>
+       
+
+    </center>
+
+</body>
+
+</html>

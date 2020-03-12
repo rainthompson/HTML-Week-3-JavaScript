@@ -25,3 +25,11 @@ function getColor(fahr) {
     }
     return color;
 }
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById('txtDegC').onkeydown = function(event){
+        if(event.keyCode == 13){
+            CtoF()
+        }
+    }
+   Btn.addEventListener("click", CtoF)
+});
